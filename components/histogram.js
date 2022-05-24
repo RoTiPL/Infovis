@@ -3,7 +3,7 @@ class Histogram {
         top: 10, right: 10, bottom: 40, left: 40
     }
 
-    constructor(svg, width = 500, height = 500) {
+    constructor(svg, width = 500, height = 600) {
         this.svg = svg;
         this.width = width;
         this.height = height;

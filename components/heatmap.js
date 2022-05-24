@@ -1,5 +1,3 @@
-// https://d3-graph-gallery.com/graph/heatmap_style.html
-
 function heatmap(div, tt, data, x0, x1, yVar, color){
 
 d3.select(`#heatmap_svg_${yVar[0]}`).remove();

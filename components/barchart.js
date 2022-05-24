@@ -1,5 +1,3 @@
-// https://bl.ocks.org/LyssenkoAlex/21df1ce37906bdb614bbf4159618699d
-
 function barchart(div, tt, data, x0Var, x1Var) {
     let margin = {
         top: 10, right: 170, bottom: 40, left: 30
