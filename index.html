@@ -13,76 +13,86 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
     <script src="components/barchart.js"></script>
     <script src="components/scatterplot.js"></script>
+
+    <style>
+        .container {
+            min-width: 800px;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav class="container navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Students Performance</span>
-            </div>
-        </nav>
+<body style="background-color: #f1f1f1;">
+    <header class="p-3 bg-dark text-white" style="min-width: 800px;">
+        <div class="container">
+            <a class="align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none" onClick="window.location.reload()">
+                <span class="fs-4">Students Performance of Personal Environment</span>
+            </a>
+        </div>
     </header>
     
 
-    <main class="container">
-        <div class="row pt-2">
-            <div class="col-1 text-end pe-2"><strong>Category1:</strong></div>
-            <div class="col-11">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c1-encoding" value="gender" id="c1-ge"
-                        checked>
-                    <label class="form-check-label" for="c1-ge">gender</label>
+    <main class="container bg-white">
+        <div class="d-flex">
+            <div class="border border-dark border-2 p-2 mt-2 mb-2 border-opacity-50 rounded-3 w-auto" style="margin: 0 auto">
+                <div class="d-flex">
+                    <div class="text-end ps-2 pe-3"><strong>Category1:</strong></div>
+                    <div class="">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c1-encoding" value="gender" id="c1-ge"
+                                checked>
+                            <label class="form-check-label" for="c1-ge">gender</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c1-encoding" value="race/ethnicity" id="c1-re">
+                            <label class="form-check-label" for="c1-re">race/ethnicity</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c1-encoding" value="parental level of education" id="c1-pl">
+                            <label class="form-check-label" for="c1-pl">parental level of education</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c1-encoding" value="lunch" id="c1-lu">
+                            <label class="form-check-label" for="c1-lu">lunch</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c1-encoding" value="test preparation course" id="c1-pc">
+                            <label class="form-check-label" for="c1-pc">test preparation course</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c1-encoding" value="race/ethnicity" id="c1-re">
-                    <label class="form-check-label" for="c1-re">race/ethnicity</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c1-encoding" value="parental level of education" id="c1-pl">
-                    <label class="form-check-label" for="c1-pl">parental level of education</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c1-encoding" value="lunch" id="c1-lu">
-                    <label class="form-check-label" for="c1-lu">lunch</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c1-encoding" value="test preparation course" id="c1-pc">
-                    <label class="form-check-label" for="c1-pc">test preparation course</label>
+                <div class="d-flex">
+                    <div class="text-end ps-2 pe-3"><strong>Category2:</strong></div>
+                    <div class="">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c2-encoding" value="gender" id="c2-ge">
+                            <label class="form-check-label" for="c2-ge">gender</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c2-encoding" value="race/ethnicity" id="c2-re"
+                            checked>
+                            <label class="form-check-label" for="c2-re">race/ethnicity</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c2-encoding" value="parental level of education" id="c2-pl">
+                            <label class="form-check-label" for="c2-pl">parental level of education</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c2-encoding" value="lunch" id="c2-lu">
+                            <label class="form-check-label" for="c2-lu">lunch</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="c2-encoding" value="test preparation course" id="c2-pc">
+                            <label class="form-check-label" for="c2-pc">test preparation course</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-1 text-end pe-2"><strong>Category2:</strong></div>
-            <div class="col-11">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c2-encoding" value="gender" id="c2-ge"
-                        checked>
-                    <label class="form-check-label" for="c2-ge">gender</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c2-encoding" value="race/ethnicity" id="c2-re">
-                    <label class="form-check-label" for="c2-re">race/ethnicity</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c2-encoding" value="parental level of education" id="c2-pl">
-                    <label class="form-check-label" for="c2-pl">parental level of education</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c2-encoding" value="lunch" id="c2-lu">
-                    <label class="form-check-label" for="c2-lu">lunch</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="c2-encoding" value="test preparation course" id="c2-pc">
-                    <label class="form-check-label" for="c2-pc">test preparation course</label>
-                </div>
-            </div>
-        </div>
-        <div id="barchart">
+        <div id="barchart" class="mb-5">
 
         </div>
 
-        <div class="text-center">
+        <div class="container text-center">
             <svg width="400" height="400" id="scatterplot">
             </svg>
         </div>

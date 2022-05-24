@@ -1,8 +1,8 @@
 function barchart(div, data, x0Var, x1Var) {
 let margin = {
-    top: 10, right: 10, bottom: 40, left: 40
+    top: 10, right: 10, bottom: 40, left: 30
 }
-let width=600, height=400;
+let width=700, height=500;
 let svg, xAxis, yAxis, legend, x0Scale, x1Scale, yScale
 
 
@@ -15,6 +15,7 @@ svg = d3.select(div).append("svg")
     .attr('id', 'barchart_svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
+    .attr('style', 'margin:0 auto; display: block')
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
