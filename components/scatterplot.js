@@ -94,7 +94,7 @@ class Scatterplot {
             this.legend
                 .style("display", "inline")
                 .style("font-size", ".8em")
-                .attr("transform", `translate(${this.width + this.margin.left - 50}, ${this.height / 2 + 50})`)
+                .attr("transform", `translate(${this.width + this.margin.left - 60}, ${this.height / 2 + 50})`)
                 .call(d3.legendColor().scale(this.zScale))
         }
         else {
